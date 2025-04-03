@@ -1,12 +1,21 @@
 import tkinter as tk
 import subprocess
 from story import StoryGame  
+from news import NewsFeed  
+from youtube import YouTubeLinksApp  
 
 def open_phishing_game():
     subprocess.Popen(["python", "phishing.py"])
 
 def open_story_game():
-    StoryGame()
+    StoryGame()  # Open Cybersecurity Story Mode inside main window
+    
+def open_youtube():
+    YouTubeLinksApp()
+    
+def open_news():
+    NewsFeed()
+
 
 # Main Window
 root = tk.Tk()
@@ -34,6 +43,9 @@ def on_leave(e):
 buttons = [
     ("📚 Cybersecurity Story Mode", open_story_game),
     ("🍣 Phishing Trap Challenge", open_phishing_game),
+    ("🎥 CyberTube", open_youtube),
+    ("📰 CyberNews", open_news)
+    
 ]
 
 for text, command in buttons:

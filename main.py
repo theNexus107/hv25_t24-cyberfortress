@@ -2,7 +2,8 @@ import tkinter as tk
 import subprocess
 from story import StoryGame  
 from news import NewsFeed  
-from youtube import YouTubeLinksApp  
+from youtube import YouTubeLinksApp 
+from usercommunity import UserCommunity
 
 def open_phishing_game():
     subprocess.Popen(["python", "phishing.py"])
@@ -21,6 +22,11 @@ def open_password_game():
 
 def open_quiz_game():
     subprocess.Popen(["python", "quiz.py"])
+
+def open_community():
+    community_window = UserCommunity()
+    community_window.mainloop()
+
 
 # Main Window
 root = tk.Tk()
@@ -51,7 +57,8 @@ buttons = [
     ("🎥 CyberTube", open_youtube),
     ("📰 CyberNews", open_news),
     ("🔐 Password Strength Game", open_password_game),
-    ("⍰ Cyber Quiz", open_quiz_game)
+    ("⍰ Cyber Quiz", open_quiz_game),
+    ("👥User Community",open_community)
     
 ]
 

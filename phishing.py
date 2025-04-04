@@ -41,10 +41,10 @@ D) Look for security red flags:
 3. Does it threaten negative consequences if you don’t act immediately?
 """
 
-        self.checklist_frame = tk.Frame(self, bg="white", padx=10, pady=10)
+        self.checklist_frame = tk.Frame(self, bg="light goldenrod", padx=10, pady=10)
         self.checklist_frame.pack(expand=True, fill="both")
 
-        checklist_label = tk.Label(self.checklist_frame, text=checklist_text, font=("Arial", 11), bg="white", justify="left", wraplength=550)
+        checklist_label = tk.Label(self.checklist_frame, text=checklist_text, font=("Arial", 11), bg="light goldenrod", justify="left", wraplength=550)
         checklist_label.pack(pady=10)
 
         proceed_button = tk.Button(self.checklist_frame, text="Proceed to Game", font=("Arial", 12, "bold"), bg="green", fg="white",
@@ -62,18 +62,18 @@ D) Look for security red flags:
             img_path = self.images[self.current_index]
 
             # Load and display the image
-            self.image_frame = tk.Frame(self, bg="white")
+            self.image_frame = tk.Frame(self, bg="burlywood1")
             self.image_frame.pack(expand=True, fill="both")
 
             image = Image.open(img_path)
             image = image.resize((500,550))  # Resize image
             img_tk = ImageTk.PhotoImage(image)
 
-            img_label = tk.Label(self.image_frame, image=img_tk, bg="white")
+            img_label = tk.Label(self.image_frame, image=img_tk, bg="burlywood1")
             img_label.image = img_tk  # Keep a reference
             img_label.pack(pady=10)
 
-            question_label = tk.Label(self.image_frame, text="Is this email Phishing or Genuine?", font=("Arial", 13, "bold"), bg="white")
+            question_label = tk.Label(self.image_frame, text="Is this email Phishing or Genuine?", font=("Arial", 13, "bold"), bg="burlywood1")
             question_label.pack(pady=5)
 
             # Buttons

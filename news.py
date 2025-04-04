@@ -10,9 +10,9 @@ class NewsFeed(tk.Toplevel):
         super().__init__(master)
         self.title("CyberNews")
         self.geometry("650x500")
-        self.configure(bg="white")
+        self.configure(bg="lemon chiffon")
 
-        tk.Label(self, text="📰 CyberNews", font=("Arial", 18, "bold"), fg="black", bg="white").pack(pady=10)
+        tk.Label(self, text="📰 CyberNews", font=("Arial", 18, "bold"), fg="black", bg="lemon chiffon").pack(pady=10)
 
         # News articles (Title, URL)
         self.news_data = [
@@ -41,7 +41,7 @@ class NewsFeed(tk.Toplevel):
     def display_news(self):
         """Displays all news articles with images, titles, and clickable links."""
         for title, link in self.news_data:
-            frame = tk.Frame(self, bg="white", relief="solid", bd=2)
+            frame = tk.Frame(self, bg="lemon chiffon", relief="solid", bd=2)
             frame.pack(pady=10, padx=10, fill="x")
 
             img_url = self.fetch_thumbnail(link)
@@ -63,7 +63,7 @@ class NewsFeed(tk.Toplevel):
                 print(f"Error loading image: {e}")
 
             # Text Label (Title - Clickable)
-            text_label = tk.Label(frame, text=title, fg="blue", font=("Arial", 12, "underline"), bg="white", cursor="hand2", wraplength=400, justify="left")
+            text_label = tk.Label(frame, text=title, fg="blue", font=("Arial", 12, "underline"), bg="lemon chiffon", cursor="hand2", wraplength=400, justify="left")
             text_label.pack(side="left", padx=10, fill="x")
             text_label.bind("<Button-1>", lambda e, url=link: self.open_link(url))
 

@@ -16,6 +16,9 @@ def open_youtube():
 def open_news():
     NewsFeed()
 
+def open_password_game():
+    subprocess.Popen(["python", "password.py"])
+
 
 # Main Window
 root = tk.Tk()
@@ -44,7 +47,8 @@ buttons = [
     ("📚 Cybersecurity Story Mode", open_story_game),
     ("🍣 Phishing Trap Challenge", open_phishing_game),
     ("🎥 CyberTube", open_youtube),
-    ("📰 CyberNews", open_news)
+    ("📰 CyberNews", open_news),
+    ("🔐 Password Strength Game", open_password_game)
     
 ]
 

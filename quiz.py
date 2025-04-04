@@ -43,7 +43,7 @@ quiz_levels = {
 
 }
 
-# Initialize variables
+# Initializing variables
 score = 0
 current_question = 0
 selected_level = ""
@@ -61,7 +61,7 @@ def check_answer(choice):
         messagebox.showinfo("Quiz Completed", f"Your final score is: {score}/{len(quiz_data)}")
         quiz_root.destroy()
 
-# Function to load question
+# Function to load questions
 def load_question():
     question_label.config(text=quiz_data[current_question]["question"])
     for i, option in enumerate(quiz_data[current_question]["options"]):

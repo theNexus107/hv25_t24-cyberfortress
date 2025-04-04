@@ -19,6 +19,8 @@ def open_news():
 def open_password_game():
     subprocess.Popen(["python", "password.py"])
 
+def open_quiz_game():
+    subprocess.Popen(["python", "quiz.py"])
 
 # Main Window
 root = tk.Tk()
@@ -48,7 +50,8 @@ buttons = [
     ("🍣 Phishing Trap Challenge", open_phishing_game),
     ("🎥 CyberTube", open_youtube),
     ("📰 CyberNews", open_news),
-    ("🔐 Password Strength Game", open_password_game)
+    ("🔐 Password Strength Game", open_password_game),
+    ("⍰ Cyber Quiz", open_quiz_game)
     
 ]
 

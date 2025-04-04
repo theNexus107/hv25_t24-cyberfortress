@@ -9,9 +9,9 @@ class YouTubeLinksApp(tk.Toplevel):
         super().__init__(master)
         self.title("CyberTube")
         self.geometry("600x400")
-        self.configure(bg="white")
+        self.configure(bg="lemon chiffon")
 
-        tk.Label(self, text="🎥 CyberTube", font=("Arial", 16, "bold"), bg="white", fg="black").pack(pady=10)
+        tk.Label(self, text="🎥 CyberTube", font=("Arial", 16, "bold"), bg="lemon chiffon", fg="black").pack(pady=10)
 
         # YouTube Video List (Title, Link)
         self.videos = [
@@ -38,7 +38,7 @@ class YouTubeLinksApp(tk.Toplevel):
 
     def display_videos(self):
         for title, link in self.videos:
-            frame = tk.Frame(self, bg="white", relief="solid", bd=1)
+            frame = tk.Frame(self, bg="lemon chiffon", relief="solid", bd=1)
             frame.pack(pady=5, padx=10, fill="x")
 
             # Fetch and display thumbnail
@@ -50,7 +50,7 @@ class YouTubeLinksApp(tk.Toplevel):
                 img_label.bind("<Button-1>", lambda e, url=link: self.open_link(url))
 
             # Video Title (Clickable)
-            text_label = tk.Label(frame, text=title, fg="blue", font=("Arial", 12, "underline"), bg="white", cursor="hand2", wraplength=400, justify="left")
+            text_label = tk.Label(frame, text=title, fg="blue", font=("Arial", 12, "underline"), bg="lemon chiffon", cursor="hand2", wraplength=400, justify="left")
             text_label.pack(side="left", padx=10)
             text_label.bind("<Button-1>", lambda e, url=link: self.open_link(url))
 
